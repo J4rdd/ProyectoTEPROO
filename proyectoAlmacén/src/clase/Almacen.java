@@ -8,7 +8,7 @@ public class Almacen {
     private double precioCompra;
     private double precioVenta;
 
-    ///Constructores (Sobrecarga)
+    ///Sobrecarga de métodos
     
     // Solo nombre y código
     public Almacen(String nombre, int codigo) {

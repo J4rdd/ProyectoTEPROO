@@ -52,9 +52,7 @@ public class v1 extends JFrame {
         txtS = new JTextArea(); scrollPane.setViewportView(txtS);
 
         //Botón Agregar
-        JButton btnAgregar = new JButton("Agregar producto");
-        btnAgregar.setBounds(380,22,160,20);
-        contentPane.add(btnAgregar);
+        JButton btnAgregar = new JButton("Agregar producto"); btnAgregar.setBounds(380,22,160,20); contentPane.add(btnAgregar);
         btnAgregar.addActionListener(e -> {
             String nombre = txtNomProducto.getText().trim();
             String codStr = txtCodProducto.getText().trim();
@@ -65,7 +63,7 @@ public class v1 extends JFrame {
                 return;
             }
 
-            try {
+            try {   //'trycatch' para el manejo de errores
                 int codigo = Integer.parseInt(codStr);
 
                 // Verificar si ya existe
@@ -91,7 +89,7 @@ public class v1 extends JFrame {
         //Botones Modificar, Buscar y Eliminar
         JButton btnModificar = new JButton("Modificar producto"); btnModificar.setBounds(380,84,160,20); contentPane.add(btnModificar);
         btnModificar.addActionListener(e -> {
-            try {
+            try {   //'trycatch' para el manejo de errores
                 int codigo = Integer.parseInt(txtCodProducto.getText().trim());
                 Almacen a = ma.Buscar(codigo);
                 if(a!=null) {
@@ -110,7 +108,7 @@ public class v1 extends JFrame {
 
         JButton btnBuscar = new JButton("Buscar producto"); btnBuscar.setBounds(380,53,160,20); contentPane.add(btnBuscar);
         btnBuscar.addActionListener(e -> {
-            try {
+            try {    //'trycatch' para el manejo de errores
                 int codigo = Integer.parseInt(txtBuscar.getText().trim());
                 Almacen a = ma.Buscar(codigo);
                 if(a!=null) {
